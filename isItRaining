@@ -1,0 +1,23 @@
+import requests
+from win10toast import ToastNotifier
+toast  = ToastNotifier()
+
+
+response = requests.get("https://api.openweathermap.org/data/2.5/weather?lat=43.9019459623617&lon=-79.25817591789605&appid=33cb2ddff7f8c3fbae1176b38291f43c")
+
+while(true) :
+
+	forecast = forecast = response.json()['weather'][0]['description']
+
+	if 'rain' is_raining:
+		toast.show_toast(
+    		"It is Going to Rain",
+    		"Make sure you keep the boxes inside dumbass",
+    		duration = 20,
+   		threaded = True,
+	)
+
+	time.sleep(10*60)
+
+
+
